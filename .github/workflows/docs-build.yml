@@ -35,7 +35,8 @@ jobs:
                   php-version: '7.3'
 
             - name: Build Docs
-              run: ./laminas-mkdoc-theme/build.sh -u https://docs.laminas.dev
+              run: ls -la . && ./laminas-mkdoc-theme/build.sh -u https://docs.laminas.dev
+              
 
             - name: Deploy
               uses: peaceiris/actions-gh-pages@v2
