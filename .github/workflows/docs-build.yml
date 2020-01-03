@@ -10,10 +10,10 @@ jobs:
     build-deploy:
         runs-on: ubuntu-18.04
         steps:
-            - uses: actions/checkout@v1
+            - uses: actions/checkout@v2
 
             - name: Checkout documentation theme
-              uses: actions/checkout@v1
+              uses: actions/checkout@v2
               with:
                   repository: laminas/documentation-theme
                   ref: master
@@ -35,7 +35,7 @@ jobs:
                   php-version: '7.3'
 
             - name: Build Docs
-              run: ls -la . && ./laminas-mkdoc-theme/build.sh -u https://docs.laminas.dev
+              run: pwd && ls -la . && ./laminas-mkdoc-theme/build.sh -u https://docs.laminas.dev
               
 
             - name: Deploy
