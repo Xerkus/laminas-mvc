@@ -14,7 +14,6 @@ use Laminas\EventManager\EventManager;
 use Laminas\EventManager\EventManagerInterface;
 use Laminas\EventManager\SharedEventManager;
 use Laminas\EventManager\SharedEventManagerInterface;
-use Laminas\ModuleManager\Listener\ServiceListener;
 use Laminas\ModuleManager\ModuleManager;
 use Laminas\Mvc\Service\ApplicationFactory;
 use Laminas\Mvc\Service\EventManagerFactory;
@@ -23,7 +22,6 @@ use Laminas\Mvc\Service\HttpExceptionStrategyFactory;
 use Laminas\Mvc\Service\HttpRouteNotFoundStrategyFactory;
 use Laminas\Mvc\Service\ModuleManagerFactory;
 use Laminas\Mvc\Service\SendResponseListenerFactory;
-use Laminas\Mvc\Service\ServiceListenerFactory;
 use Laminas\Mvc\Service\ViewFactory;
 use Laminas\Mvc\Service\ViewPhpRendererFactory;
 use Laminas\Mvc\Service\ViewPhpRendererStrategyFactory;
@@ -45,7 +43,6 @@ class ConfigProvider
                 'EventManagerInterface' => EventManager::class,
                 EventManagerInterface::class => 'EventManager',
                 ModuleManager::class => 'ModuleManager',
-                ServiceListener::class => 'ServiceListener',
                 SharedEventManager::class => 'SharedEventManager',
                 'SharedEventManagerInterface' => 'SharedEventManager',
                 SharedEventManagerInterface::class => 'SharedEventManager',
@@ -75,7 +72,6 @@ class ConfigProvider
             'factories' => [
                 'EventManager' => EventManagerFactory::class,
                 'ModuleManager' => ModuleManagerFactory::class,
-                'ServiceListener' => ServiceListenerFactory::class,
                 'SharedEventManager' => static function () {
                     return new SharedEventManager();
                 },
