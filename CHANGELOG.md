@@ -18,7 +18,10 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Removed
 
-- Nothing.
+- [#54](https://github.com/laminas/laminas-mvc/pull/54) Removes deprecated built-in
+  optional middleware pipes support. Support for dispatching middleware within
+  laminas-mvc application was moved to `laminas/laminas-mvc-middleware`
+  package.
 
 ### Fixed
 
