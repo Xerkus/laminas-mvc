@@ -74,7 +74,6 @@ class ConfigProvider
                     return new SharedEventManager();
                 },
                 'Application' => ApplicationFactory::class,
-                'config' => 'Laminas\Mvc\Service\ConfigFactory',
                 'ControllerManager' => 'Laminas\Mvc\Service\ControllerManagerFactory',
                 'ControllerPluginManager' => 'Laminas\Mvc\Service\ControllerPluginManagerFactory',
                 'DispatchListener' => 'Laminas\Mvc\Service\DispatchListenerFactory',
