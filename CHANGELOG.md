@@ -23,6 +23,9 @@ All notable changes to this project will be documented in this file, in reverse 
   laminas-mvc application was moved to `laminas/laminas-mvc-middleware`
   package.
 
+- [#56](https://github.com/laminas/laminas-mvc/pull/56) Removes dependency on
+  `laminas/laminas-modulemanager`
+
 ### Fixed
 
 - Nothing.
