@@ -45,7 +45,6 @@ use Laminas\Stdlib\ResponseInterface;
  * can simply extend the class to override such behavior.
  */
 class Application implements
-    ApplicationInterface,
     EventManagerAwareInterface
 {
     const ERROR_CONTROLLER_CANNOT_DISPATCH = 'error-controller-cannot-dispatch';

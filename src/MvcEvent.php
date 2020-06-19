@@ -65,10 +65,9 @@ class MvcEvent extends Event
     /**
      * Set application instance
      *
-     * @param  ApplicationInterface $application
      * @return MvcEvent
      */
-    public function setApplication(ApplicationInterface $application)
+    public function setApplication(Application $application)
     {
         $this->setParam('application', $application);
         $this->application = $application;
@@ -78,7 +77,7 @@ class MvcEvent extends Event
     /**
      * Get application instance
      *
-     * @return ApplicationInterface
+     * @return Application
      */
     public function getApplication()
     {
